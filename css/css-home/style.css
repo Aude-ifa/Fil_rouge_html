@@ -218,7 +218,7 @@ display: none;
     box-shadow: 8px 8px 12px black;
 }
 #html {
-    background-image: linear-gradient(315deg, #3a90c4 29%, #ff9525 74%);
+    background-color: rgba(5,102,157,1);
     padding-top: 55px;
     grid-row: 1 / 4;
 }
