@@ -1,0 +1,178 @@
+@font-face {
+  font-family: 'web';
+  src: url("../Font/WEBSTER_.TTF");
+}
+body,
+html {
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  align-items: center;
+  background-color: #DBDBDB;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/***********************************NAVIGATION***********************************/
+header {
+  display: flex;
+  height: 100px;
+  background-color: #3A4454;
+}
+#burger,
+#burger:after,
+#burger:before,
+#trigger {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background: #53687E;
+  width: 30px;
+  height: 5px;
+  transition: 0.2s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+#trigger {
+  height: 25px;
+  background: none;
+}
+#burger:before {
+  content: " ";
+  top: 10px;
+  left: 0;
+}
+#burger:after {
+  content: " ";
+  top: 20px;
+  left: 0;
+}
+#menu {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 99px;
+  height: 99px;
+  background-color: #DBDBDB;
+  border: black solid 3px;
+  border-bottom-right-radius: 100%;
+}
+#menu-toggle:checked + #trigger + #burger {
+  top: 35px;
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+#menu-toggle:checked + #trigger + #burger:before {
+  width: 20px;
+  top: -2px;
+  left: 18px;
+  transform: rotate(45deg) translateX(-5px);
+  transition: transform 0.2s ease;
+}
+#menu-toggle:checked + #trigger + #burger:after {
+  width: 20px;
+  top: 2px;
+  left: 18px;
+  transform: rotate(-45deg) translateX(-5px);
+  transition: transform 0.2s ease;
+}
+#menu a,
+#menu li {
+  margin: 75px 0 -55px;
+  color: #53687E;
+  text-decoration: none;
+  text-transform: none;
+  list-style: none;
+  outline: 0;
+  display: none;
+  font-family: 'web';
+}
+#menu li {
+  width: 230px;
+  text-indent: 56px;
+}
+#menu a:focus {
+  display: block;
+  color: black;
+  transition: all 0.5s;
+}
+#menu-toggle:checked + #trigger + #burger + #menu {
+  animation: checked-anim 1s ease both;
+}
+#menu a,
+#menu-toggle:checked + #trigger ~ #menu > li {
+  display: block;
+}
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  display: none;
+}
+
+@keyframes checked-anim {
+  50% {
+      width: 300px;
+      height: 300px;
+  }
+  100% {
+      width: 300px;
+      height: 300px;
+      border-radius: 0 0 15px 0;
+  }
+}
+@keyframes not-checked-anim {
+  0% {
+      width: 300px;
+      height: 300px;
+  }
+}
+/***********************************EXERCICE***********************************/
+h1 {
+text-align: center;
+font-family: 'web';
+text-decoration: underline;
+font-size: 1.7em;
+
+}
+p{
+text-align: center;
+font-family: 'web';
+color: #3A4454;
+font-style: italic;
+font-size: bold;
+font-size: 1.4em;
+}
+
+.container {
+  width: 50%;
+  top: 40%;
+  left: 50%;
+  transform: translate(50%, 40%);
+}
+.row {
+  width: 100%;
+  margin: 15px 0;
+}
+.row > div {
+  float: left;
+}
+
+.row::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.col-1 {
+  background-color: #3A4454;
+  padding-top: 15px;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5em;
+  width: calc(100%/2);
+}
+.link {
+  color: black;
+  text-decoration: none;
+}

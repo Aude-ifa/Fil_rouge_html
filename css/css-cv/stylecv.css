@@ -1,0 +1,242 @@
+/***********************************STYLES GENERAUX***********************************/
+* {
+  padding: 0;
+  margin: 0;
+  text-align: justify;
+  box-sizing: border-box;
+} 
+body { 
+  display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  background: fixed;
+  background-color: white;
+}
+p {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+h2 {
+  text-decoration: underline rgb(37, 7, 7);
+  color:  rgb(49, 58, 71);
+  padding-bottom: 20px;
+}
+
+/***********************************HEADER & FOOTER***********************************/
+header {
+  height: 120px;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #3A4454;
+  box-shadow: 0 0 15px #333;
+  border: 1px solid black;
+}
+header h1 {
+  color: black;
+  font-size: 2.7em;
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Sniglet', cursive;
+}
+footer {
+  height: 40px;
+  background-color: #3A4454;
+  box-shadow: 0 0 15px #333;
+  border: 1px solid black;
+}
+footer p {
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  padding-top: 10px;
+}
+footer a {
+  color: #fff;
+}
+
+/***********************************SECTIONS***********************************/
+section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px black;
+  border: 1px solid black;
+  background-color: #DBDBDB;
+}
+
+section h2 {
+  margin: 20px 0;
+  width: 90%;
+  font-family: 'Inria Serif', serif;
+}
+section > div {
+  width: 90%;
+}
+
+/***********************************SECTION INFORMATION***********************************/
+.photo {
+  text-align: center;
+}
+.photo img {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  box-shadow: 0 0 10px black;
+  border-radius: 50%;
+  margin-top: -80px;
+}
+.contact {
+  display: flex;
+  flex-flow: row wrap;
+}
+ .contact p:first-child {
+  flex: 0 0 40%;
+}
+ .contact p:last-child {
+  flex: 0 0 60%;
+}
+/***********************************SECTION FORMATION ET EXPERIENCE***********************************/
+.exp {
+  display: flex;
+  flex-flow: row wrap;
+  border-bottom: 1px solid #3A4454;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.exp-info {
+  display: flex;
+  flex-flow: column wrap;
+}
+.exp-logo {
+  flex: 0 0 25%;
+  max-width: 100px;
+}
+.exp-info {
+  flex: 0 0 70%;
+  margin-left: auto;
+}
+.exp img {
+  width: 100%; 
+  border-radius: 50%;
+  border: 2px solid black;
+  box-shadow: 0 0 15px black;
+}
+.exp h3 {
+  font-size: 1.2em;
+  font-family: 'Sniglet', cursive;
+  text-decoration: underline;
+}
+.exp h4 {
+  font-size: 1em;
+  font-weight: normal;
+  font-family: 'Inria Serif', serif;
+}
+
+/***********************************SECTION COMPETENCES***********************************/
+.h3gauche {
+  width: 90%;
+  font-family: 'Sniglet', cursive;
+  text-decoration: underline;
+}
+.comp {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 10px;
+}
+.comp p {
+  flex: 0 0 40%;
+  font-family: 'Sniglet', cursive;
+}
+.conteneur-barre {
+  flex: 0 0 60%;
+  border-radius: 5px;
+  background-color: white;
+  border-bottom: 1px ridge grey;
+  box-shadow: 0 0 15px #555;
+}
+.barre {
+  display: block;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.c90 {
+  width: 90%;
+  background-color: #3A4454;
+}
+.c95 {
+  width: 95%;
+  background-color: #3A4454;
+}
+.c100 {
+  width: 100%;
+  background-color: #3A4454;
+  border-radius: 5px;
+}
+.comp2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.comp2 p {
+  font-family: 'Sniglet', cursive;
+}
+.comp2 h3 {
+  font-family: 'Inria Serif', serif;
+}
+.conteneur-barre2 {
+  flex: 0 0 100%;
+  height: 0.5em;
+  margin-bottom: 0.25em;
+  border-radius: 5px;
+  border-bottom: 1px ridge grey;
+  background-color: white;
+  box-shadow: 0 0 15px #555;
+}
+
+/***********************************HOBBIES***********************************/
+.hobbie {
+  flex: 0 1 50%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.hobbie h2 {
+  font-family: 'Inria Serif', serif;
+}
+.hobbie figcaption {
+  font-family: 'Sniglet', cursive;
+}
+.hobbie img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #555;
+  border: 2px black solid;
+}
+
+/***********************************SCROLL BAR STYLES***********************************/
+/* Largeur */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fcfcfc;
+  border-radius: 10px;
+}
+/* Couleur */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(165deg, rgb(0, 0, 0) 0%, rgb(13, 7, 48) 40%, #3A4454 100%);
+  border-radius: 20px;
+}

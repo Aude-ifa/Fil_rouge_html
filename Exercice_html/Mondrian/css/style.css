@@ -1,0 +1,220 @@
+
+ @font-face {
+    font-family: "comics";
+    src: url("../css/Comica\ BD.ttf");
+}
+h1 {
+    font-family: 'comics';
+    font-size: 5em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/*CONTAINER*/
+#grid-container {
+    box-shadow: 12px 12px 12px 12px rgb(48, 47, 47);
+    margin: auto;
+    height: 60vh;
+    width: 1000px;
+    display: grid;
+    grid-gap: 10px;
+    background: black;
+    padding: 10px;
+    grid-template-areas:
+    "w1 w1 w2 w2 w2 w2 w2 w2 w2 w2 w2 w2 w2 w2 w3 w3 w3 w3 w3 w3 w3 w3 w3 w3 w3 w3 w3 w3 w4 w4 y1 y1"
+    "w1 w1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 w5 w5 w5 w5 w5 b2 b2 b2 b2 b2 b2 b2 b2 b2 w4 w4 y1 y1"
+    "w1 w1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 w5 w5 w5 w5 w5 b2 b2 b2 b2 b2 b2 b2 b2 b2 w4 w4 y1 y1"
+    "w1 w1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 w5 w5 w5 w5 w5 b2 b2 b2 b2 b2 b2 b2 b2 b2 w4 w4 y1 y1"
+    ".  .  w6 w6 w6 w6 .  .  w7 w7 w7 w7 w8 w8 y2 y2 y2 y2 y2 r1 r1 r1 r1 r1 r1 r1 r2 r2 w4 w4 y1 y1"
+    ".  .  w6 w6 w6 w6 .  .  w7 w7 w7 w7 w8 w8 y2 y2 y2 y2 y2 r1 r1 r1 r1 r1 r1 r1 r2 r2 w4 w4 y1 y1"
+    ".  .  w6 w6 w6 w6 .  .  w7 w7 w7 w7 w8 w8 y2 y2 y2 y2 y2 r1 r1 r1 r1 r1 r1 r1 r2 r2 w4 w4 y1 y1"
+    ".  .  w6 w6 w6 w6 .  .  w7 w7 w7 w7 w8 w8 y2 y2 y2 y2 y2 r1 r1 r1 r1 r1 r1 r1 r2 r2 w4 w4 y1 y1"
+    ".  .  w6 w6 w6 w6 .  .  w7 w7 w7 w7 w8 w8 y2 y2 y2 y2 y2 r1 r1 r1 r1 r1 r1 r1 r2 r2 w4 w4 y1 y1"
+    ".  .  w6 w6 w6 w6 .  .  w7 w7 w7 w7 w8 w8 y2 y2 y2 y2 y2 r1 r1 r1 r1 r1 r1 r1 r2 r2 w4 w4 y1 y1"
+    ".  .  w6 w6 w6 w6 .  .  y3 y3 r3 r3 r3 r3 b3 b3 b3 b3 b3 w9 w9 w9 w9 w9 w9 w9 w10 w10 .  .  .  . "
+    ".  .  w6 w6 w6 w6 .  .  y3 y3 r3 r3 r3 r3 b3 b3 b3 b3 b3 w9 w9 w9 w9 w9 w9 w9 w10 w10 .  .  .  . "
+    ".  .  w6 w6 w6 w6 .  .  y3 y3 r3 r3 r3 r3 b3 b3 b3 b3 b3 w9 w9 w9 w9 w9 w9 w9 w10 w10 .  .  .  . "
+    "w11 w11 r4 r4 r4 r4 .  .  y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4 b4 b4 y5 y5 w14 w14 w14 w14"
+    "w11 w11 r4 r4 r4 r4 .  .  y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4 b4 b4 y5 y5 w14 w14 w14 w14"
+    "w11 w11 r4 r4 r4 r4 .  .  y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4 b4 b4 y5 y5 w14 w14 w14 w14"
+    "w11 w11 r4 r4 r4 r4 .  .  y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4 b4 b4 y5 y5 w14 w14 w14 w14"
+    "w11 w11 r4 r4 r4 r4 .  .  y4 y4 w12 w12 w12 w12 w12 w12 w12 w13 w13 w13 w13 w13 w13 b4 b4 b4 y5 y5 w14 w14 w14 w14"
+    "w11 w11 r4 r4 r4 r4 .  .  y4 y4 r5 r5 r5 r5 .  .  .  .  .  .  .  .  .  w15 w15 w15 w15 w15 w15 w15 w15 w15"
+    "w11 w11 r4 r4 r4 r4 .  .  y4 y4 r5 r5 r5 r5 .  .  .  .  .  .  .  .  .  w15 w15 w15 w15 w15 w15 w15 w15 w15"
+    "w16 w16 w16 w16 w16 w16 w16 w16 y4 y4 r5 r5 r5 r5 .  .  .  .  .  .  .  .  .  w15 w15 w15 w15 w15 w15 w15 w15 w15"
+    "w16 w16 w16 w16 w16 w16 w16 w16 y4 y4 r5 r5 r5 r5 .  .  .  .  .  .  .  .  .  w15 w15 w15 w15 w15 w15 w15 w15 w15";   
+}
+
+/*-------------------------------------*/
+/*---------------Areas-----------------*/
+/*-------------------------------------*/
+/*Items Blanc*/
+#item1 {
+    grid-area: w1;
+}
+
+#item2 {
+    grid-area: w2;
+}
+
+#item3 {
+    grid-area: w3;
+}
+
+#item4 {
+    grid-area: w4;
+}
+
+#item5 {
+    grid-area: w5;
+}
+
+#item6 {
+    grid-area: w6;
+}
+
+#item7 {
+    grid-area: w7;
+}
+
+#item8 {
+    grid-area: w8;
+}
+
+#item9 {
+    grid-area: w9;
+}
+
+#item10 {
+    grid-area: w10;
+}
+
+#item11 {
+    grid-area: w11;
+}
+
+#item12 {
+    grid-area: w12;
+}
+
+#item13 {
+    grid-area: w13;
+}
+
+#item14 {
+    grid-area: w14;
+}
+
+#item15 {
+    grid-area: w15;
+}
+
+#item16 {
+    grid-area: w16;
+}
+
+#item17 {
+    grid-area: b1;
+}
+
+/*Items Bleu*/
+#item18 {
+    grid-area: b2;
+}
+
+#item19 {
+    grid-area: b3;
+}
+
+#item20 {
+    grid-area: b4;
+}
+
+/*Items Jaune*/
+#item21 {
+    grid-area: y1;
+}
+
+#item22 {
+    grid-area: y2;
+}
+
+#item23 {
+    grid-area: y3;
+}
+
+#item24 {
+    grid-area: y4;
+}
+
+#item25 {
+    grid-area: y5;
+}
+
+/*Items Rouge*/
+#item26 {
+    grid-area: r1;
+}
+
+#item27 {
+    grid-area: r2;
+}
+
+#item28 {
+    grid-area: r3;
+}
+
+#item29 {
+    grid-area: r4;
+}
+
+#item30 {
+    grid-area: r5;
+}
+
+
+
+/*-------------------------------------*/
+/*---------------Color-----------------*/
+/*-------------------------------------*/
+#item1,
+#item10,
+#item11,
+#item12,
+#item13,
+#item14,
+#item15,
+#item16,
+#item2,
+#item3,
+#item4,
+#item5,
+#item6,
+#item7,
+#item8,
+#item9 {
+    background: whitesmoke;
+}
+
+#item17,
+#item18,
+#item19,
+#item20 {
+    background: rgb(31, 10, 219);
+}
+
+#item21,
+#item22,
+#item23,
+#item24,
+#item25 {
+    background: rgb(247, 211, 6);
+}
+
+#item26,
+#item27,
+#item28,
+#item29,
+#item30 {
+    background: red;
+}

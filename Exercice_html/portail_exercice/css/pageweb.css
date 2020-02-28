@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "rick";
+    src: url(./get_schwifty.ttf);
+}
+@font-face{
+    font-family: "morty";
+    src: url(./ONECHUX.ttf);
+}
+header {
+    visibility: hidden;
+    /*N'est visible que si on appelle dans la propriété visibility: visible; */
+    font-family: "rick";
+    color: yellowgreen;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+    font-size: 1.5em;
+}
+footer {
+    visibility: hidden;
+    /*N'est visible que si on appelle dans la propriété visibility: visible; */
+    font-family: "rick";
+    color: yellowgreen;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+}
+article {
+    display: flex;
+}
+p {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 320px;
+    font-family: "morty";
+    font-size: 1.2em;
+}
+
+@media screen and (max-width : 640px) {
+
+    article {
+        display: block;
+        /* Les textes sont affichés sous forme de colonnes au-dessus de
+        640px et l’un en dessous de l’autre en dessous de 640px */
+    }
+}
+
+@media screen and (min-width : 800px) {
+    header {
+        visibility: visible;
+        /*Le header appataît sur les écran au dessus de 800px*/
+    }
+
+}
+
+@media print {
+    footer {
+        visibility: visible;
+        /*Le footer appataît a l'impression*/
+    }
+}

@@ -1,0 +1,78 @@
+/*--------------------------Carrousel--------------------------*/
+#manegeEnchante {
+  width: 700px;
+  height:367px;
+  overflow: hidden;
+  margin: 25px auto;
+  border: 5px solid black;
+}
+#manegeEnchante img {
+  display: block;
+  float: left;
+  
+}
+
+#photo {
+  position: relative;
+  width: 2800px; /*4 images * 700px de large (largeur de l'image)*/
+  animation-name: portfolio;
+  animation-iteration-count: infinite;
+  animation-duration: 24s;
+}
+
+@keyframes portfolio {
+  0% {left: 0px;}
+  5% {left: 0px;}
+  16% {left: -700px;}
+  21% {left: -700px;}
+  32% {left: -1400px;}
+  37% {left: -1400px;}
+  48% {left: -2100px;}
+  53% {left: -2100px;}
+  64% {left: -1400px;}
+  69% {left: -1400px;}
+  80% {left: -700px;}
+  85% {left: -700px;}
+  100% {left: 0px;}
+
+}
+/*--------------------------Légende--------------------------*/
+#exoLegende {
+  padding: 50px;
+}
+
+.images {
+  width: 700px;
+  height:367px;
+  display:inline-block ;
+  overflow: hidden;
+}
+
+.legend { 
+  top: 0;
+  position: relative;
+  display: block;
+  width: 700px;
+  height: 367px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  text-align: justify;
+  /*Transition*/
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+
+/* Pour faire beau mais pas nécessaire dans cette exo ! 
+.images:nth-child(1), .images:nth-child(3){
+  margin-right: 34px;
+}
+.images:nth-child(1), .images:nth-child(2){
+  margin-right: 34px;
+} */
+
+#img1:hover #leg1 {top: -50px;}
+#img2:hover #leg2 {top: -50px;}
+#img3:hover #leg3{top: -50px;} 
+#img4:hover #leg4 {top: -50px;}
+/*--------------------------Carrousel 3D--------------------------*/

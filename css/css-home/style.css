@@ -1,0 +1,436 @@
+/***********************************STYLE GENERAL***********************************/
+@font-face {
+    font-family: 'web';
+    src: url("../Font/WEBSTER_.TTF");
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: auto;
+    display: block;
+}
+
+/***********************************NAVIGATION***********************************/
+header {
+    display: flex;
+    height: 100px;
+    background-color: #3A4454;
+}
+#menu a,
+#menu li {
+    margin: 75px 0 -55px;
+    color: #53687E;
+    text-decoration: none;
+    text-transform: none;
+    list-style: none;
+    outline: 0;
+    display: none;
+    font-family: 'web';
+}
+#menu li {
+    width: 230px;
+    text-indent: 56px;
+}
+#menu a:focus {
+    display: block;
+    color: black;
+    background-color: #DBDBDB;
+    transition: all 0.5s;
+}
+#burger,
+#burger:after,
+#burger:before,
+#trigger {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: #53687E;
+    width: 30px;
+    height: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+    z-index: 1;
+}
+#trigger {
+    height: 25px;
+    background: none;
+}
+#burger:before {
+    content: " ";
+    top: 10px;
+    left: 0;
+}
+#burger:after {
+    content: " ";
+    top: 20px;
+    left: 0;
+}
+#menu {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 99px;
+    height: 99px;
+    background-color: #DBDBDB;
+    border: black solid 3px;
+    border-bottom-right-radius: 100%;
+}
+#menu-toggle:checked + #trigger + #burger {
+    top: 35px;
+    transform: rotate(180deg);
+    transition: transform 0.2s ease;
+}
+#menu-toggle:checked + #trigger + #burger:before {
+    width: 20px;
+    top: -2px;
+    left: 18px;
+    transform: rotate(45deg) translateX(-5px);
+    transition: transform 0.2s ease;
+}
+#menu-toggle:checked + #trigger + #burger:after {
+    width: 20px;
+    top: 2px;
+    left: 18px;
+    transform: rotate(-45deg) translateX(-5px);
+    transition: transform 0.2s ease;
+}
+#menu-toggle:checked + #trigger + #burger + #menu {
+    animation: checked-anim 1s ease both;
+}
+#menu-toggle:checked + #trigger ~ #menu > li,
+#menu a {
+    display: block;
+}
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+display: none;
+}
+/*ANIMATION BURGER MENU*/
+@keyframes checked-anim {
+    50% {
+        width: 300px;
+        height: 300px;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        border-radius: 0 0 15px 0;
+    }
+}
+@keyframes not-checked-anim {
+    0% {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/***********************************ACCEUIL***********************************/
+#acceuil {
+    height: 865px;
+    background-attachment: fixed;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+}
+#acceuil #title {
+    color: #DBDBDB;
+    font-family: 'web';
+    font-size: 2em;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/***********************************PRESENTATION***********************************/
+#presentation {
+    display: flex;
+    margin: auto;
+    padding: 40px 0px 100px 0px;
+    background-color: #DBDBDB;
+}
+#presentation #title {
+    font-size: 30px;
+    margin-top: 90px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#presentation .accent-text {
+    font-family: 'Playfair Display', serif;
+    color: #3A4454;
+}
+#presentation #txt {
+    margin: 10px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+/***********************************PORFOLIO***********************************/
+#portfolio {
+    margin: auto ;
+    padding:  40px 0px 100px 0px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #3A4454;
+}
+#portfolio #title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#portfolio .accent-text {
+    font-family: 'Playfair Display', serif;
+    color: #DBDBDB;
+}
+#grid {
+    display: grid;
+    grid-column-gap: 35px;
+    grid-template-rows: repeat(4);
+}
+#grid div:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    -webkit-transition: 0.6s ease-in-out;
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+}
+#grid a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+#grid a:visited {
+   color: #DBDBDB;
+}
+#grid > div {
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+#html, #php, #js, #adobe {
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    box-shadow: 8px 8px 12px black;
+}
+#html {
+    background-image: linear-gradient(315deg, #3a90c4 29%, #ff9525 74%);
+    padding-top: 55px;
+    grid-row: 1 / 4;
+}
+#php {
+    background-color: #4F5B93;
+    padding-top: 70px;
+    grid-row: 1 / 2;
+}
+#js {
+    background-color: #E5A228;
+    padding-top: 70px;
+    grid-row: 1 / 3;
+}
+#adobe {
+    background-color: #2E001F;
+    padding-top: 70px;
+    grid-row: 1 / 4;
+}
+
+/***********************************CV***********************************/
+#cv {
+    margin: auto;
+    padding: 40px 0px 100px 0px;
+    display: flex;
+    background-color: #DBDBDB;
+    justify-content: center;
+}
+#img_cv:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    -webkit-transition: 0.6s ease-in-out;
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+}
+#cv #title {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+#cv .accent-text {
+    font-family: 'Playfair Display', serif;
+    color: #3A4454;
+}
+#img_cv {
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: #3A4454;
+    box-shadow: 8px 8px 12px black;
+    margin-left: 100px;
+}
+#img_cv a {
+    display: block;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 50px;
+    text-decoration: none;
+}
+#img_cv a:focus {
+    color: black;
+    transition: all 0.5s;
+}
+
+/***********************************FORMULAIRE***********************************/
+.formulaire {
+    width: 100%;
+    margin: auto;
+    padding: 40px 0px 100px 0px;
+    background-color: #3A4454;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contact #title {
+    font-size: 30px;
+    text-align: center;
+}
+#contact .accent-text {
+    font-family: 'Playfair Display', serif;
+    color: #DBDBDB;
+}
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 208px;
+    border: none;
+    margin-top: 55px;
+}
+.form-container * {
+    border-radius: 4px;
+}
+#message {
+    resize: none;
+    height: 210px;
+    width: 49%;
+}
+.contenaineur_lignes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 49%;
+    height: 100%;
+}
+#name {
+    resize: none;
+    width: 100%;
+    height: 52px;
+}
+#email {
+    resize: none;
+    width: 100%;
+    height: 52px;
+}
+#sujet {
+    resize: none;
+    width: 73%;
+    height: 52px;
+}
+#submit {
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: black;
+    width: 120px;
+    height: 52px;
+    background-color: #DBDBDB;
+    border: 1px solid black;
+}
+#submit:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    -webkit-transition: 0.6s ease-in-out;
+    transition: 0.6s ease-in-out;
+}
+
+/***********************************FOOTER***********************************/
+footer {
+    margin-top: -16px;
+    height: 25px;
+    background: #DBDBDB;
+    text-align: center;
+}
+footer p {
+    padding-top: 5px;
+    color: #3A4454;
+    font-weight: bold;
+}
+
+/***********************************SCROLL BAR STYLES***********************************/
+/* Largeur */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fcfcfc;
+    border-radius: 10px;
+}
+/* Couleur */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(165deg, rgb(0, 0, 0) 0%, rgb(13, 7, 48) 40%, #3A4454 100%);
+    border-radius: 20px;
+}
+
+
+
+/***********************************MEDIA QUERIES***********************************/
+@keyframes sanchez{
+    0% {left:-250px}
+    100%{left: 0px;}
+}
+@media screen and (max-width : 700px){
+    #rick {
+        position: absolute;
+        animation-name: sanchez ;
+        animation-duration: 3s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+}
+@media screen and (max-width : 1024px) { 
+    #grid {
+        grid-row-gap: 35px;
+    }
+    #html {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    #php {
+        grid-column: 1 / 2;
+        grid-row: 2 / 2;
+    }
+    #js {
+        grid-column: 2 / 2;
+        grid-row: 1 / 2;
+    }
+    #adobe {
+        grid-column: 2 / 2;
+        grid-row: 2 / 2;
+    }
+}
+@media screen and (min-width : 700px) {
+    #rick {
+        visibility: hidden;
+    }
+}

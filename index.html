@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/css-home/style.css">
+        <link rel="stylesheet" href="css/css-home/stylebg.css">
+        <link rel="icon" type="image/png" href="./img/geek.png" />
+    </head>
+    <body>
+        <header>
+            <div id="conteneur_header">
+                <div id="nav">
+                    <input type="checkbox" id="menu-toggle"/>
+                    <label id="trigger" for="menu-toggle"></label>
+                    <label id="burger" for="menu-toggle"></label>
+                    <ul id="menu">
+
+                        <li>
+                            <a href="#presentation">Présentation</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#cv">Curriculum vitae</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="acceuil">
+                <div id="rick"><img src="./img/rick-whatever.png" alt=""></div>
+                <div id='stars'></div>
+                <div id='stars2'></div>
+                <div id='stars3'></div>
+                <div id="conteneur_acceuil">
+                    <div id="title">
+                        <h1>Lyskawa Aude</h1>
+                        <h2 id="background-text-animation">"Développeur intégrateur web et web mobile"</h2>
+                    </div>
+                </div>
+            </section>
+            <section id="presentation">
+                <div id="conteneur_presentation">
+                    <div id="title">
+                        <h2>Bonjour, moi c'est
+                            <span class="accent-text">Aude</span>
+                        </h2>
+                    </div>
+                    <div id="txt">
+                        <p>Actuellement en formation au sein de l'Ifa-Tech de Metz en tant que
+                            développeur intégrateur Web et Web mobile, j'ai décidé de créer ce site pour
+                            monter mon potentiel. Passionnée par le monde de l'informatique, de la
+                            programmation et du jeu vidéo, je vous ferais découvrir à travers mon site de
+                            nombreux projets que j'ai pu réaliser au cours de l'année.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio">
+                <div id="conteneur_portfolio">
+                    <div id="title">
+                        <h1>Mon
+                            <span class="accent-text">Portfolio</span>
+                        </h1>
+                    </div>
+                    <div id="grid">
+                        <div id="html"><a href="html.html" target="_blank">HTML /
+                            <br>
+                            CSS</a>
+                        </div>
+                        <div id="php"><a href="php.html" target="_blank">PHP</a></div>
+                        <div id="js"><a href="javascript.html" target="_blank">JavaScript</a></div>
+                        <div id="adobe"><a href="adobe.html" target="_blank">Adobe XD</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cv">
+                <div id="conteneur_cv">
+                    <div id="title">
+                        <h1>Mon
+                            <span class="accent-text">Curriculum Vitae</span></h1>
+                    </div>
+                    <div id="img_cv">
+                        <a href="cv.html" target="_blank">CV
+                            <br>
+                            cliquez-ici</a>
+                    </div>
+                    <div id="button"></div>
+                </div>
+            </section>
+        </main>
+        <!-- C O N T A C T -->
+        <section class="formulaire" id="contact">
+            <div id="title">
+                <h1>Mon
+                    <span class="accent-text">Formulaire de contact</span>
+                </h1>
+            </div>
+            <form class="form-container" action="contact.php" method="GET">
+
+                <textarea id="message" rows="1" placeholder="Message" required="required"></textarea>
+
+                <div class="contenaineur_lignes">
+
+                    <textarea id="name" rows="1" placeholder="Name" required="required"></textarea >
+                    <textarea
+                        id="email"
+                        rows="1"
+                        placeholder="Email"
+                        type="email"
+                        required="required"></textarea>
+                    <textarea
+                        id="sujet"
+                        rows="1"
+                        placeholder="Sujet"
+                        type="sujet"
+                        required="required"></textarea>
+                    <button id="submit" type="submit">Envoyer</button>
+                </div>
+            </form>
+        </section>
+        <footer>
+            <p>
+                LYSKAWA Aude</p>
+        </footer>
+    </body>
+</html>

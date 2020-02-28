@@ -1,0 +1,56 @@
+.titleSpe{
+  color: blue;
+  background-color: #e7e5e5;
+  font-size: 24px;
+  height: 50px;
+  transition-delay: 0.5s;
+  text-align: center;
+  transition: color 1s, height 1s 1s, font-size 3s 2s linear;
+  
+}
+
+.titleSpe:hover {
+  background-color: teal;
+  height: 100px;
+  font-size: 48px;
+  color: tomato;
+}
+
+#pSpe
+{
+  background-color: #b49f9f;
+  padding: 10px;
+  text-align: center;
+  margin-right: 0;
+  border-radius: 20px;
+  opacity: 0.85;
+  transition: margin-right 2s 1s, letter-spacing 1s 1s linear ;
+}
+
+#pSpe:hover {
+  background-color: #909;
+  color: #fff;
+  margin-right: 50%;
+  letter-spacing: 3px;
+}
+
+.cuby{
+  height: 150px;
+  width: 150px;
+  font-size: 120px;
+  line-height: 120px;
+  text-align: center;
+  background-color: yellow;
+  border-radius: 75px;
+  margin: 90px auto 90px;
+ font-weight: bold;
+
+}
+
+.cuby:hover {
+  background-color: red;
+  color: white;
+  transform: rotate(90deg) scale(2);
+  transform: skew(45deg, 10deg) ;/*Applique une distorsion sur ax, ay // ay est facultatif*/
+  transform: rotate3d(1,1,1,45deg);/*Applique une rotation en 3D selon un facteur de x, y, z et a un angle de rotation*/
+}
